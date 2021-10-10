@@ -15,7 +15,17 @@ def home():
 def about():
     return render_template('about.html')
 
+# registration page
+@app.route('/register')
+def register():
+    form = RegistrationForm()
+    return render_template('register.html', title = 'Register', form = form)
 
+# login page
+@app.route('/login')
+def login():
+    form = LoginForm
+    return render_template('login.html', title = 'Login', form = form)
 
 
 if __name__ == '__main__':
